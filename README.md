@@ -4,7 +4,7 @@ IoT CDK Stack
 
 This project defines AWS infrastructure for an IoT-based system using the "AWS Cloud Development Kit (CDK)" in "Java". It includes an AWS IoT Thing, a topic rule to listen to MQTT topics, and a Lambda function triggered by the rule.
 
-1. Prerequisites
+Prerequisites
 ----------------
 
 Ensure the following tools are installed on your system:
@@ -21,7 +21,7 @@ Install AWS CDK:
 npm install -g aws-cdk
 
 
-2. Local Deployment Steps
+Local Deployment Steps
 ---------------------------
 
 Follow these commands to build and deploy the CDK stack locally:
@@ -32,7 +32,7 @@ cdk synth                  # Synthesize CloudFormation template
 cdk deploy                 # Deploy the stack to AWS
 
 
-3. CI/CD Pipeline (Using Jenkins)
+CI/CD Pipeline (Using Jenkins)
 ----------------------------------
 
 The Jenkins pipeline automates the build and deployment of the CDK stack.
@@ -51,7 +51,7 @@ Pipeline Trigger Options:
 * Scheduled build (e.g., nightly or daily)
 * Change detection on `*.java` files or `Jenkinsfile`
 
-4. Assumptions
+Assumptions
 ---------------
 
 * You have AWS credentials configured using either:
@@ -63,14 +63,14 @@ Pipeline Trigger Options:
 * CDK environment is bootstrapped using `cdk bootstrap`
 
 
-5. Clean Up
+Clean Up
 -----------
 To remove the deployed infrastructure:
 
 cdk destroy
 -This will delete the IoT Thing, Lambda, and Topic Rule created by the stack.
 
- 6. Future Improvements
+Future Improvements
  ------------------------
 
 * Add DynamoDB or S3 integration for telemetry storage
